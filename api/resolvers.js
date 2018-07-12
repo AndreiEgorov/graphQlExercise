@@ -15,6 +15,9 @@ const resolvers = {
         director(movie) {
             if (!movie.director) return null
             return data.people.find(person => person.id === movie.director)
+        },
+        stars(movie) {
+            return data.people
         }
     }
 
