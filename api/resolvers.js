@@ -15,7 +15,15 @@ const resolvers = {
         director(movie) {
             if (!movie.director) return null
             return data.people.find(person => person.id === movie.director)
-        }
+        },
+
+        stars(movie) {
+            return data.people.filter(person => (
+              person.filmography.find(credit => (
+                credit === movie.id && person.id !== movie.director
+              ))
+            ));
+          },
     }
 
 
