@@ -3,13 +3,13 @@ const { gql } = require('apollo-server-express');
 
 module.exports = gql`
 
-
 type Person {
   id: ID!
   name: String!
   birthday: String
   placeOfBirth: String
   bio: String
+  filmography: [Movie]
 }
 
 type Movie {

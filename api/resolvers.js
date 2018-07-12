@@ -8,7 +8,13 @@ const resolvers = {
         },
         movie(root, { id }) {
             return data.movies.find(movie => movie.id === parseInt(id))
-        }
+        },
+        people() {
+            return data.people
+        },
+        person(root, { id }) {
+            return data.people.find(person => person.id === parseInt(id))
+        },
 
     },
     Movie: {
@@ -26,6 +32,11 @@ const resolvers = {
             );
         },
     }
+    // Person: {
+    //     filmography(person) {
+    //         return data.movies.find(film => film.id === movies.id)
+    //     }
+    // }
 
 
 
