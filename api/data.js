@@ -2,7 +2,7 @@ const data = {
     people: [
         {
             id: 1,
-            name: "Mark Hamill",
+            name: "Mark Haill",
             birthday: "September 25, 1951",
             placeOfBirth: "Oakland, California, USA",
             bio:
