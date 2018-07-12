@@ -22,7 +22,8 @@ const resolvers = {
               person.filmography.find(credit => (
                 credit === movie.id && person.id !== movie.director
               ))
-            ));
+            )
+        );
           },
     }
 
